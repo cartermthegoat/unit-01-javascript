@@ -18,9 +18,11 @@ let first = clean.slice(0, 4)  ;   // 3. cut out the first name
 console.log(first)
 let last = clean.slice(4)  ;   // 4. cut out the last name
 console.log(last)
-first  ;       // 5. capitalize each one
-last   ;
-console.log();  // 6. print "Last, First"
+first= first.replace("j", "J")  ;       // 5. capitalize each one
+last= last.replace("s", "S") ;
+
+
+console.log(last,',',first);  // 6. print "Last, First"
 </script>   
 </body>
 </html>

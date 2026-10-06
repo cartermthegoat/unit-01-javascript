@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+"use strict"; 
+const MIN = 1; 
+const MAX = 100; 
+const secret = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN; 
+
+let attempts = 0; 
+let win = false; 
+
+while (!win) { 
+    let input = prompt("Guess a number from 1 to 100:"); 
+
+    if (input === null) { 
+        alert("Game canceled"); 
+        break; // Stops the loop completely
+    } 
+
+    let guess = Number(input); 
+
+    if (!input || isNaN(guess) || guess < MIN || guess > MAX || !Number.isInteger(guess)) { 
+        alert("Please enter a number from 1 to 100."); 
+        continue; // Skips the rest of this turn and prompts again
+    } 
+
+    attempts++; 
+
+    if (guess < secret) { 
+        alert("Too low. Try again."); 
+    } else if (guess > secret) { 
+        alert("Too high. Try again."); 
+    } else { 
+        win = true; 
+        alert("You got it! The number was " + secret); 
+    } 
+}
+
+   
+  
+</script>
+</body>
+</html>

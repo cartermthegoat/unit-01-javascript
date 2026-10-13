@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+// ---------- Puzzle 1: Same name, different variable ----------
+// PREDICTION: 3, 2 
+// ACTUAL: 3,2
+// WHY: The parameter lives had created a local variable that overrided the lives variable inside of the function scope so when the lives = lives - 1 is ran, the number decrements from 3 to 2 and returns 2. The outer variable of lives remains untouched at 3.
+console.log("--- Puzzle 1 ---");
+let lives = 3;
+function loseLife(lives) {
+    lives = lives - 1;
+    return lives;
+}
+let left = loseLife(lives);
+console.log(lives, left);
+
+// ---------- Puzzle 2: The unchanged score ----------
+// PREDICTION: 100,50
+// ACTUAL: 100,50
+// WHY: Inside the doubleIt(score), the number 50 replaces the parameter of num. num then is doubled making the local parameter of num to 100. However the console.log(score) logs an unmodified 50.
+console.log("--- Puzzle 2 ---");
+let score = 50;
+function doubleIt(num) {
+    num = num * 2;
+    console.log(num);
+}
+doubleIt(score);
+console.log(score);
+
+// ---------- Puzzle 3: The quiet shout ----------
+// PREDICTION: dog, undefined
+// ACTUAL: dog, undefined
+// WHY:
+console.log("--- Puzzle 3 ---");
+function shout(word) {
+    word = word.toUpperCase();
+}
+let pet = "dog";
+shout(pet);
+console.log(pet);
+
+// MY FIX: Complete shoutFixed so pet ends up as "DOG"
+// without making pet global inside the function. (Hint: return)
+function shoutFixed(word) {
+    // write your code here
+}
+pet = shoutFixed(pet);
+console.log("Puzzle 3 fix:", pet);
+
+</script>
+</body>
+</html>

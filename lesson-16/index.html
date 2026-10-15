@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+let seating = [ ["Elhadj", "Eli", "Carter", "Jimmy"], 
+["Akadir", "John", "Steven", "Abigail"], ["Anastasia", "Onnjel", "Jude", "Carlos"] ];
+function chart() {
+    for (let i = 0; i < seating.length; i++) {
+        let row = "Row " + (i + 1) + ":";
+        for (let j = 0; j < seating[i].length; j++) {
+            row += " " + seating[i][j];
+        }
+        console.log(row);
+    }
+  }
+  chart()
+
+  console.log("Student at row 2, seat 3: ", seating[2][3])
+  seating[0][1] = "Chrisley"
+  console.log("Update Seating Chart:");
+  chart()
+</script>
+</body>
+</html>

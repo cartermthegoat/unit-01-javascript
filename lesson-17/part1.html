@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+   // Core 1: Create an object named student with three properties:
+//   name (a string), grade (a number), and scores (an array of three test scores).
+
+   let student = {
+        name: "John",
+        grade: 12,
+        scores: [95, 80, 92],
+        describe:function() {
+          return this.name + " is in grade " + this.grade
+        }
+    }
+// Core 2: Log the name using DOT notation.
+//   Log the grade using BRACKET notation.
+console.log(student["grade"]);
+//   Log the second score using student.scores[1].
+console.log(student.score[1]);
+// Core 3: Change grade to a new value. Add a new homeroom property.
+student.grade = 9;
+student.homeroom = "Room 207";
+
+
+//   Log both. Then log a property that does NOT exist.
+console.log(student.grade);
+console.log(student.homeroom);
+console.log(student.age);
+//  Write a comment explaining what printed.
+// When you access a property that doesn't exist "undefined" gets printed because the variable now exists but doesn't have a value.
+
+// Core 4: Execute and log the method
+
+// Log the return value of the describe method
+console.log(student.describe());
+ </script>
+</body>
+</html>

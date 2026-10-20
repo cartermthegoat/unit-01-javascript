@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+function Student(name, grade, scores) {
+    this.name = name;
+    this.grade = grade;
+    this.scores = scores;
+this.getHighest = function() {
+    return Math.max(this.scores[0], this.scores[1], this.scores[2]);
+    };
+}
+
+let roster = [
+    new Student("Akadir", 12, [95,75,65]),
+    new Student("John", 12,[0,25,35]),
+    new Student("Jimmy", 12, [55,100,25])
+
+]
+
+console.log(roster[0].name, ": ", roster[0].getHighest())
+console.log(roster[1].name, ": ", roster[1].getHighest())
+console.log(roster[2].name, ": ", roster[2].getHighest())
+</script>
+</html>

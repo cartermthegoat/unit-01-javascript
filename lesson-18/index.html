@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+function Student(name, scores) {
+    for (let i = 0; i < scores.length; i++) {
+
+    
+    let score = scores[i];
+    if (typeof scores !== 'number' || isNaN(scores) || scores < 0 || scores > 100) 
+        throw new Error("Invalid score for " + name + ": " + scores)
+    }
+this.name= name;
+this.scores = scores; 
+
+this.getAverage = function() {
+    return (scores[0])
+    let sum = 0;
+    for (let i = 0; i < scores.length; i++) {
+        sum += this.scores [i];
+    }
+return sum / scores.length;
+};
+} 
+
+let roster = []
+try { 
+  roster.push(new Student("Ava", [92, 88, 95])); 
+} catch(error) { 
+  console.log(error.message);
+} 
+
+try {
+  roster.push(new Student("Ben", [75, 82, 80])); 
+} catch(err) { 
+  console.log(err.message); 
+} 
+
+try {
+  roster.push(new Student("Finn", [88, "ninety", 91])); 
+} catch(err) { 
+  console.log(err.message); 
+}
+
+try {
+  roster.push(new Student("Chloe", [68, 71, 59])); 
+} catch(err) { 
+  console.log(err.message); 
+}
+
+try {
+  roster.push(new Student("Diego",[85, 90, 78])); 
+} catch(err) { 
+  console.log(err.message); 
+}
+
+try {
+  roster.push(new Student("Gia", [94, -5, 87])); 
+} catch(err) { 
+  console.log(err.message); 
+}
+
+try {
+  roster.push(new Student("Emma", [55, 62, 48])); 
+} catch(err) { 
+  console.log(err.message); 
+}
+
+
+</script>
+</body>
+</html>

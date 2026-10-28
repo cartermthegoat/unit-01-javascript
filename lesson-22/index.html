@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Club</title>
+</head>
+
+<body>
+ <h1 id="pageTitle">Art Club 2024</h1>
+  <h2>Old News</h2>
+  <h2>Old Events</h2>
+  <p id="intro">Welcome!</p>
+  <ul id="supplies"></ul>
+  <p class="date">TBD</p>
+  <p class="date">TBD</p>
+  <p class="date">TBD</p>
+  <p id="footer"></p> 
+ <script>
+// Change the #pageTitle heading to Art Club 2026 with getElementById and textContent.
+document.getElementById("pageTitle").textContent = "Art Club 2026"
+// Use getElementsByTagName("h2") to change the first <h2> to Club News and the second to Upcoming Events.
+    let headings = document.getElementsByTagName("h2");
+    headings[0].textContent = "Club News";
+    headings[1].textContent = "Upcoming Events";
+
+// Use getElementsByClassName("date") and a for loop to change every TBD to Wednesdays at 3:30.
+    let dateElements = document.getElementsByClassName("date");
+    for (let i = 0; i < dateElements.length; i++) {
+      dateElements[i].textContent = "Wednesdays at 3:30";
+    }
+// Stretch: Set #intro so the word Welcome is bold and the rest is plain: <b>Welcome</b> to Art Club! Then, on the next line, try the same string with textContent. Write a comment explaining the difference you see.
+document.getElementById("intro").innerHTML = "<b>Welcome</b> to Art Club!";
+// Challenge: Create the array let supplies = ["Sketchbook", "Pencils", "Watercolors"];. Use a for loop and innerHTML += to fill #supplies with one <li> per item.
+let supplies = ["Sketchbook", "Pencils", "Watercolors"]
+let suppliesList = document.getElementById("supplies");
+for (let i = 0; i < supplies.length; i++) {
+  suppliesList.innerHTML += "<li>" + supplies[i] + "</li>";
+}
+</script>
+</body>
+</html>

@@ -37,9 +37,39 @@
 
  function checkQty(){
   if(qty.value.trim() === "") {
-    showError("qtyError", "Enter a quanity"), )
+    showError(document.getElementById("qtyError"), "Enter a quanity");
+    return false;
+  } else if (isNaN(qty.value)) {
+document.getElementById("qtyError"),textContent = "Quantity must be a number."
+return false; }
+  else if (qty.value < 1 || qty.value > 10 ) {
+   document.getElementById("qtyError").textContent = "Order 1 to 10 pizzas."
+   return false;
+  } else {
+    document.getElementById("qtyError").textContent = "";
+    return true;
   }
  }
+ const CODE = "PIZZA5"
+ function checkPromo() {
+  if (qty.value.trim() === "") {
+    showError(document.getElementById("promoError"), "Enter promo code");
+    return false;
+  } else if (promo.value.toLowerCase() !== CODE.toLowerCase){
+    document.getElementById("promoError").textContent = "Invalid promo code.";
+    return false; {
+      else {
+        showError("promoError").textContent = 
+      }
+    
+
+  }
+
+ }
+
+ addEventListener("change", checkName)
+ addEventListener("change", checkQty)
+ addEventListener("change", checkPromo)
   </script>
 </body>
 </html>

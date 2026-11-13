@@ -55,17 +55,9 @@ return false; }
   if (qty.value.trim() === "") {
     showError(document.getElementById("promoError"), "Enter promo code");
     return false;
-  } else if (promo.value.toLowerCase() !== CODE.toLowerCase){
-    document.getElementById("promoError").textContent = "Invalid promo code.";
-    return false; {
-      else {
-        showError("promoError").textContent = 
-      }
-    
+ 
 
-  }
-
- }
+ } }
 
  addEventListener("change", checkName)
  addEventListener("change", checkQty)
